@@ -1,0 +1,7 @@
+float32 x
+float32 y
+float32 z
+float32[6] initial_guess_joint_angles
+---
+float32[6] desired_joint_angles
+bool converged
