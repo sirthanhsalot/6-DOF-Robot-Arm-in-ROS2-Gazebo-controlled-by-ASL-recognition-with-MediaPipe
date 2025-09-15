@@ -1,0 +1,729 @@
+<?xml version="1.0" ?>
+<robot name="success" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find robotarm1)/urdf/materials.xacro" />
+  <!-- ============================= -->
+
+<link name="world"/>
+<link name="base_link">
+
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_1_1">
+  <inertial>
+    <origin xyz="3.628829346516639e-06 0.002321966228830479 0.01746041392822499" rpy="0 0 0"/>
+    <mass value="0.6789927169229144"/>
+    <inertia ixx="0.000325" iyy="0.000181" izz="0.000257" ixy="-0.0" iyz="-8e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.07" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.07" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_1">
+  <inertial>
+    <origin xyz="3.116517286715824e-14 0.0011404315085001282 0.0026024287473348923" rpy="0 0 0"/>
+    <mass value="0.02126433295845854"/>
+    <inertia ixx="2e-06" iyy="4e-06" izz="6e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.01805 -0.113" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.01805 -0.113" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_2_1">
+  <inertial>
+    <origin xyz="-0.016539586071775015 0.011003628829346513 0.03207196622883057" rpy="0 0 0"/>
+    <mass value="0.6789927169229144"/>
+    <inertia ixx="0.000257" iyy="0.000325" izz="0.000181" ixy="0.0" iyz="-0.0" ixz="-8e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.017 -0.00705 -0.1197" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.017 -0.00705 -0.1197" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_1">
+  <inertial>
+    <origin xyz="-0.027999999999980655 0.019804685074076584 0.01686096319842667" rpy="0 0 0"/>
+    <mass value="0.05448373289857463"/>
+    <inertia ixx="1.3e-05" iyy="3.2e-05" izz="3.2e-05" ixy="-0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0278 -0.01805 -0.1675" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0278 -0.01805 -0.1675" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_1">
+  <inertial>
+    <origin xyz="-0.019002468210588864 0.011265489623913744 0.017659662426253858" rpy="0 0 0"/>
+    <mass value="0.0552102238099497"/>
+    <inertia ixx="2e-05" iyy="1.7e-05" izz="2.4e-05" ixy="-0.0" iyz="-4e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0188 -0.052592 -0.182461" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0188 -0.052592 -0.182461" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4_1">
+  <inertial>
+    <origin xyz="-0.0120000000968575 0.014596944381057228 0.0019209753631552196" rpy="0 0 0"/>
+    <mass value="0.04342078162492755"/>
+    <inertia ixx="1.9e-05" iyy="2.5e-05" izz="2.4e-05" ixy="-0.0" iyz="4e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0118 -0.085817 -0.225194" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0118 -0.085817 -0.225194" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_3_1">
+  <inertial>
+    <origin xyz="-0.01653958616863254 0.03155325662043752 0.012411879639587703" rpy="0 0 0"/>
+    <mass value="0.6789927169229144"/>
+    <inertia ixx="0.000257" iyy="0.000241" izz="0.000264" ixy="-6e-06" iyz="-7.1e-05" ixz="-5e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.01755 -0.092096 -0.23448" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.01755 -0.092096 -0.23448" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_1">
+  <inertial>
+    <origin xyz="-0.02800000009683809 0.026002420832358097 0.0006118155166975892" rpy="0 0 0"/>
+    <mass value="0.05448373289857463"/>
+    <inertia ixx="1.3e-05" iyy="3.1e-05" izz="3.3e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.02835 -0.135623 -0.25709" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.02835 -0.135623 -0.25709" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_6_1">
+  <inertial>
+    <origin xyz="-0.03447684065920139 0.0036645815558500883 0.01108891988158256" rpy="0 0 0"/>
+    <mass value="0.01953980766714853"/>
+    <inertia ixx="3e-06" iyy="1.2e-05" izz="9e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.01935 -0.171871 -0.24694" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.01935 -0.171871 -0.24694" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_4_1">
+  <inertial>
+    <origin xyz="-0.01920343918080634 0.017853818341815875 -0.016884935385133693" rpy="0 0 0"/>
+    <mass value="0.5683577063335443"/>
+    <inertia ixx="0.000133" iyy="0.000195" izz="0.000234" ixy="-7e-06" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.002397 -0.183203 -0.275514" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.002397 -0.183203 -0.275514" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_7_1">
+  <inertial>
+    <origin xyz="3.833091163267868e-08 0.009300994007382518 0.016462825532284286" rpy="0 0 0"/>
+    <mass value="0.022873425755281396"/>
+    <inertia ixx="9e-06" iyy="1.2e-05" izz="8e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.001603 -0.224098 -0.259171" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.001603 -0.224098 -0.259171" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_7_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_5_1">
+  <inertial>
+    <origin xyz="0.00847786512548423 0.02430701491069548 0.01554528626890489" rpy="0 0 0"/>
+    <mass value="0.349956896326235"/>
+    <inertia ixx="0.000101" iyy="6.3e-05" izz="8.3e-05" ixy="-0.0" iyz="2e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.010103 -0.234234 -0.26191" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.010103 -0.234234 -0.26191" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_8_1">
+  <inertial>
+    <origin xyz="3.825698971873272e-08 0.01989765925476633 0.022765394103367642" rpy="0 0 0"/>
+    <mass value="0.005409120330097442"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.001603 -0.270153 -0.257253" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.001603 -0.270153 -0.257253" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_9_1">
+  <inertial>
+    <origin xyz="3.8531361511596335e-08 0.004789230011400136 -0.02710068765011786" rpy="0 0 0"/>
+    <mass value="0.014111619441575405"/>
+    <inertia ixx="4e-06" iyy="6e-06" izz="2e-06" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.001603 -0.299299 -0.293948" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_9_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.001603 -0.299299 -0.293948" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_9_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_6_1">
+  <inertial>
+    <origin xyz="0.014977865319199292 0.014994153121127118 0.0017184942198582576" rpy="0 0 0"/>
+    <mass value="0.349956896326235"/>
+    <inertia ixx="0.000101" iyy="8.3e-05" izz="6.3e-05" ixy="0.0" iyz="-2e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.016603 -0.311242 -0.266722" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.016603 -0.311242 -0.266722" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/motor_6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_10_1">
+  <inertial>
+    <origin xyz="1.8881984123759804e-05 0.007113439253758902 0.00016750020448380587" rpy="0 0 0"/>
+    <mass value="0.016517367966711924"/>
+    <inertia ixx="5e-06" iyy="8e-06" izz="5e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.001603 -0.346438 -0.280053" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_10_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.001603 -0.346438 -0.280053" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_10_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_1_1">
+  <inertial>
+    <origin xyz="-0.008894334070789444 0.02431239600315649 0.015327024950343271" rpy="0 0 0"/>
+    <mass value="0.349956896326235"/>
+    <inertia ixx="0.000101" iyy="6.3e-05" izz="8.3e-05" ixy="-0.0" iyz="2e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.007285 -0.354495 -0.264856" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/gripper_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.007285 -0.354495 -0.264856" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/gripper_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_11_1">
+  <inertial>
+    <origin xyz="-0.020339619497389386 -0.0004578460326667977 0.019490934800781956" rpy="0 0 0"/>
+    <mass value="0.005783955125023724"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.001074 -0.390419 -0.259988" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_11_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.001074 -0.390419 -0.259988" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_11_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_12_1">
+  <inertial>
+    <origin xyz="0.003408667393922985 0.008609960353675616 0.015297169275065692" rpy="0 0 0"/>
+    <mass value="0.011446844551351427"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.013783 -0.377785 -0.265566" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_12_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.013783 -0.377785 -0.265566" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/link_12_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger_1_1">
+  <inertial>
+    <origin xyz="0.02968986982337453 0.04830119665267402 0.0018797520204901774" rpy="0 0 0"/>
+    <mass value="0.02058349518896819"/>
+    <inertia ixx="3.5e-05" iyy="5e-06" izz="3.8e-05" ixy="-1e-05" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.019405 -0.385926 -0.280908" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/finger_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.019405 -0.385926 -0.280908" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/finger_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger_2_1">
+  <inertial>
+    <origin xyz="-0.028798813853003112 0.04420830332161485 0.00031718297311517096" rpy="0 0 0"/>
+    <mass value="0.0296291055226969"/>
+    <inertia ixx="4.5e-05" iyy="9e-06" izz="4.7e-05" ixy="1.3e-05" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.031566 -0.389967 -0.279225" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/finger_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.031566 -0.389967 -0.279225" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm1)/meshes/finger_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="ft_frame"/>
+<link name="tool0"/>
+
+<joint name="world_to_base" type="fixed">
+  <parent link="world"/>
+  <child link="base_link"/>
+  <!-- Optionally set the origin for placement -->
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <axis xyz="0 0 1"/>
+</joint>
+
+<joint name="Rigid 1" type="fixed">
+  <origin xyz="0.0 0.0 0.07" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_1_1"/>
+</joint>
+
+<joint name="Revolute_2" type="revolute">
+  <origin xyz="0.0 0.01805 0.043" rpy="0 0 0"/>
+  <parent link="motor_1_1"/>
+  <child link="link_1_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+  <limit upper="1.658063" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 3" type="fixed">
+  <origin xyz="0.017 -0.011 0.0067" rpy="0 0 0"/>
+  <parent link="link_1_1"/>
+  <child link="motor_2_1"/>
+</joint>
+
+<joint name="Revolute_4" type="revolute">
+  <origin xyz="0.0108 0.011 0.0478" rpy="0 0 0"/>
+  <parent link="motor_2_1"/>
+  <child link="link_2_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 5" type="fixed">
+  <origin xyz="-0.009 0.011 0.036" rpy="0 0 0"/>
+  <parent link="link_2_1"/>
+  <child link="link_3_1"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="-0.007 -0.011 0.053" rpy="0 0 0"/>
+  <parent link="link_3_1"/>
+  <child link="link_4_1"/>
+</joint>
+
+<joint name="Rigid 7" type="fixed">
+  <origin xyz="0.00575 -0.003 0.0108" rpy="0 0 0"/>
+  <parent link="link_4_1"/>
+  <child link="motor_3_1"/>
+</joint>
+
+<joint name="Revolute_8" type="revolute">
+  <origin xyz="0.0108 0.011 0.0478" rpy="0 0 0"/>
+  <parent link="motor_3_1"/>
+  <child link="link_5_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="-0.009 0.036 -0.011" rpy="0 0 0"/>
+  <parent link="link_5_1"/>
+  <child link="link_6_1"/>
+</joint>
+
+<joint name="Rigid 10" type="fixed">
+  <origin xyz="-0.016953 0.012 0.0283" rpy="0 0 0"/>
+  <parent link="link_6_1"/>
+  <child link="motor_4_1"/>
+</joint>
+
+<joint name="Revolute_11" type="revolute">
+  <origin xyz="-0.004 0.0405 -0.0173" rpy="0 0 0"/>
+  <parent link="motor_4_1"/>
+  <child link="link_7_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 12" type="fixed">
+  <origin xyz="-0.0085 0.010197 0.0025" rpy="0 0 0"/>
+  <parent link="link_7_1"/>
+  <child link="motor_5_1"/>
+</joint>
+
+<joint name="Revolute_13" type="revolute">
+  <origin xyz="0.0085 0.0358 -0.0055" rpy="0 0 0"/>
+  <parent link="motor_5_1"/>
+  <child link="link_8_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 14" type="fixed">
+  <origin xyz="0.0 0.03 0.036" rpy="0 0 0"/>
+  <parent link="link_8_1"/>
+  <child link="link_9_1"/>
+</joint>
+
+<joint name="Rigid 15" type="fixed">
+  <origin xyz="-0.015 0.0113 -0.0275" rpy="0 0 0"/>
+  <parent link="link_9_1"/>
+  <child link="motor_6_1"/>
+</joint>
+
+<joint name="Revolute_16" type="revolute">
+  <origin xyz="0.015 0.0355 0.0125" rpy="0 0 0"/>
+  <parent link="motor_6_1"/>
+  <child link="link_10_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 17" type="fixed">
+  <origin xyz="0.0085 0.007698 -0.0156" rpy="0 0 0"/>
+  <parent link="link_10_1"/>
+  <child link="gripper_1_1"/>
+</joint>
+
+<joint name="Revolute_18" type="revolute">
+  <origin xyz="-0.0085 0.0358 -0.0055" rpy="0 0 0"/>
+  <parent link="gripper_1_1"/>
+  <child link="link_11_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+  <limit upper="0.0" lower="-0.872665" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 19" type="fixed">
+  <origin xyz="0.0065 0.0233 0.0" rpy="0 0 0"/>
+  <parent link="gripper_1_1"/>
+  <child link="link_12_1"/>
+</joint>
+
+<joint name="Rigid 20" type="fixed">
+  <origin xyz="0.006 0.0085 0.015" rpy="0 0 0"/>
+  <parent link="link_12_1"/>
+  <child link="finger_1_1"/>
+</joint>
+
+<joint name="Rigid 21" type="fixed">
+  <origin xyz="-0.03 0.0 0.02" rpy="0 0 0"/>
+  <parent link="link_11_1"/>
+  <child link="finger_2_1"/>
+</joint>
+
+<joint name="joint-ft_frame" type="fixed">
+    <parent link="gripper_1_1"/>
+    <child link="ft_frame"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+<joint name="joint-tool" type="fixed">
+    <parent link="ft_frame"/>
+    <child link="tool0"/>
+    <origin xyz="-0.0085 0.0358 -0.0055" rpy="0 0 0"/>
+</joint>
+
+<ros2_control name="GazeboSystem" type="system">
+  <hardware>
+    <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  </hardware>
+  <joint name="Revolute_2">
+    <command_interface name="position">
+        <param name="min">-1.570796</param>
+        <param name="max"> 1.570796</param>
+    </command_interface>
+    <state_interface name="position">
+        <param name="initial_value">0.0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>
+
+  <joint name="Revolute_4">
+    <command_interface name="position">
+        <param name="min">-1.570796</param>
+        <param name="max"> 1.570796</param>
+    </command_interface>
+    <state_interface name="position">
+        <param name="initial_value">0.0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>
+
+  <joint name="Revolute_8">
+    <command_interface name="position">
+        <param name="min">-1.570796</param>
+        <param name="max"> 1.570796</param>
+    </command_interface>
+    <state_interface name="position">
+        <param name="initial_value">0.0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>
+
+  <joint name="Revolute_11">
+    <command_interface name="position">
+        <param name="min">-1.570796</param>
+        <param name="max"> 1.570796</param>
+    </command_interface>
+    <state_interface name="position">
+        <param name="initial_value">0.0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>  
+
+  <joint name="Revolute_13">
+    <command_interface name="position">
+        <param name="min">-1.570796</param>
+        <param name="max"> 1.570796</param>
+    </command_interface>
+    <state_interface name="position">
+        <param name="initial_value">0.0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>  
+
+  <joint name="Revolute_16">
+    <command_interface name="position">
+        <param name="min">-1.570796</param>
+        <param name="max"> 1.570796</param>
+    </command_interface>
+    <state_interface name="position">
+        <param name="initial_value">0.0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>  
+
+  <joint name="Revolute_18">
+    <command_interface name="position">
+        <param name="min">-0.872665</param>
+        <param name="max"> 0</param>
+    </command_interface>
+  
+    <command_interface name="effort">
+        <param name="max"> 5.0</param>
+    </command_interface>
+    <state_interface name="position">
+        <param name="initial_value">0.0</param>
+    </state_interface>
+    <state_interface name="velocity"/>
+    <state_interface name="effort"/>
+  </joint>  
+
+</ros2_control>
+
+<gazebo>
+  <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+    <parameters>$(find robotarm1)/config/ros2_controllers.yaml</parameters>
+  </plugin>
+</gazebo>
+
+</robot>
