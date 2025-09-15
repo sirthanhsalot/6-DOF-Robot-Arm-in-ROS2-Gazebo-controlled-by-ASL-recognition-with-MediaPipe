@@ -1,0 +1,4 @@
+files = 'abcdefgh'
+file = 'a'
+y = float(files.index(file))
+print(y)  # Should print 0.0 for 'a'
