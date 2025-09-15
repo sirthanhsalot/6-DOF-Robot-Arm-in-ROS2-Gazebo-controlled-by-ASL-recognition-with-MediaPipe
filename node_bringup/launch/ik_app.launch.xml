@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="ik_pkg" exec="kinematics_node" output="screen" launch-prefix="gnome-terminal --" />
+
+  <node pkg="ik_pkg" exec="input_node" output="screen" launch-prefix="gnome-terminal --" />
+  
+  <include file = "$(find-pkg-share robotarm1)/launch/launchtest.launch.py"/>
+</launch>

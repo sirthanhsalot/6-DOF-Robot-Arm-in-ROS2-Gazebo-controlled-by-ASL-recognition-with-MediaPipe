@@ -1,0 +1,10 @@
+<launch>
+  <node pkg="ik_pkg" exec="kinematics_node" output="screen" launch-prefix="gnome-terminal --" />
+
+  <node pkg="cv" exec="gesture_recognition_node" output="screen"  />
+  <node pkg="cv" exec="chess_subscriber_node" output="screen"  />
+
+  
+  <include file = "$(find-pkg-share robotarm1)/launch/world_test.launch.py"/>
+  <include file = "$(find-pkg-share robotarm1)/launch/robot_test.launch.py"/>
+</launch>
